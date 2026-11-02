@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anjali Yadav - BPT-109 Assignment 1</title>
+<meta name="description" content="BPT-109 Assignment-1: Introduction to Computer and Input/Output Devices">
+<link rel="icon" href="data:,">
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--ink:#1d2433;--muted:#5a6578;--a:#2563eb;--b:#7c3aed;--c:#059669;--d:#ea580c;--e:#db2777;--f:#0891b2;--line:#e3e8f0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+header{background:linear-gradient(135deg,#1e3a8a,#7c3aed);color:#fff;text-align:center;padding:36px 16px 30px}
+header h1{font-size:2.1rem;letter-spacing:.5px}
+.roll{display:inline-block;margin-top:8px;background:rgba(255,255,255,.18);padding:6px 18px;border-radius:30px;font-weight:600}
+header p{margin-top:12px;opacity:.9;font-size:.95rem}
+.chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.chips span{background:#fff;color:#1e3a8a;border-radius:20px;padding:4px 12px;font-size:.8rem;font-weight:600}
+main{max-width:1000px;margin:0 auto;padding:18px 14px 40px}
+section h2{margin-bottom:4px}
+section{background:var(--card);border-radius:16px;padding:20px;margin-top:20px;box-shadow:0 2px 10px rgba(30,40,70,.07);border-top:5px solid var(--a)}
+.qh{display:flex;gap:12px;align-items:flex-start;margin-bottom:10px}
+.qn{min-width:42px;height:42px;border-radius:12px;background:var(--a);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.qh h2{font-size:1.15rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 10px;border-radius:12px;background:#eef2ff;color:var(--a);margin-top:4px}
+.qs{font-size:.88rem;color:var(--muted);background:#f8fafc;border-left:4px solid var(--line);padding:8px 12px;border-radius:6px;margin:8px 0 14px}
+h3{font-size:1rem;margin:16px 0 8px;color:#111}
+p,li{font-size:.93rem}
+ul{padding-left:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.box{border-radius:14px;padding:14px;color:#fff;text-align:center}
+.box .ic{font-size:1.9rem}
+.box b{display:block;margin:4px 0}
+.box small{opacity:.95;font-size:.8rem;display:block}
+.timeline{display:flex;gap:10px;overflow-x:auto;padding:6px 2px 12px}
+.gen{min-width:165px;flex:1;border-radius:14px;padding:14px 12px;color:#fff;position:relative}
+.gen .n{font-size:1.6rem;font-weight:800;opacity:.85}
+.gen b{display:block;margin:2px 0}
+.gen small{display:block;font-size:.78rem;opacity:.95}
+.size{height:8px;background:rgba(255,255,255,.35);border-radius:6px;margin-top:8px;overflow:hidden}
+.size i{display:block;height:100%;background:#fff}
+table{width:100%;border-collapse:collapse;font-size:.85rem;margin-top:8px}
+th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
+th{background:#eef2ff;color:#1e3a8a}
+td,th{word-break:break-word}
+.panel .steps{flex-direction:column}
+.bar{margin:8px 0}
+.bar label{font-size:.82rem;font-weight:600;display:flex;justify-content:space-between}
+.track{height:12px;background:#e8edf5;border-radius:8px;overflow:hidden;margin-top:3px}
+.fill{height:100%;border-radius:8px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.panel{border:1px solid var(--line);border-radius:14px;padding:14px}
+.verdict{margin-top:14px;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:12px;padding:12px;font-size:.92rem}
+.steps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;margin:10px 0}
+.st{background:#eef2ff;border:2px solid var(--a);border-radius:12px;padding:8px 12px;font-size:.82rem;font-weight:600;text-align:center}
+.ar{font-weight:800;color:var(--a)}
+svg{width:100%;height:auto;display:block}
+footer{text-align:center;color:var(--muted);font-size:.8rem;padding:20px}
+.legend{display:flex;flex-wrap:wrap;gap:10px;font-size:.78rem;margin-top:6px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:4px;vertical-align:middle}
+@media(max-width:560px){header h1{font-size:1.6rem}section{padding:14px}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Anjali Yadav</h1>
+  <div class="roll">Roll No: 1826011</div>
+  <p>BPT-109 &bull; Assignment-1 &bull; Submission Date: 13-Oct 2026</p>
+  <div class="chips"><span>Unit 1: Introduction to Computer</span><span>Unit 2: Input &amp; Output Devices</span></div>
+</header>
+
+<main>
+
+<!-- OVERVIEW -->
+<section style="border-top-color:#7c3aed">
+  <h2>Assignment at a Glance (Bloom's Taxonomy)</h2>
+  <div class="steps" style="margin-top:12px">
+    <div class="st">Remember<br>Q1</div><span class="ar">&rarr;</span>
+    <div class="st">Understand<br>Q2</div><span class="ar">&rarr;</span>
+    <div class="st">Apply<br>Q3</div><span class="ar">&rarr;</span>
+    <div class="st">Analyze<br>Q4, Q5</div><span class="ar">&rarr;</span>
+    <div class="st">Evaluate<br>Q6, Q7</div><span class="ar">&rarr;</span>
+    <div class="st">Create<br>Q8</div>
+  </div>
+</section>
+
+<!-- Q1 -->
+<section style="border-top-color:#2563eb">
+  <div class="qh"><div class="qn">1</div><div><h2>Characteristics &amp; Generations of Computers</h2><span class="tag">Remembering &bull; List, Identify</span></div></div>
+  <div class="qs">List four primary characteristics of a modern digital computer and identify the key hardware technology associated with each of the five generations.</div>
+
+  <h3>Four Primary Characteristics</h3>
+  <div class="grid">
+    <div class="box" style="background:#2563eb"><div class="ic">⚡</div><b>Speed</b><small>Performs millions to billions of operations per second</small></div>
+    <div class="box" style="background:#7c3aed"><div class="ic">🎯</div><b>Accuracy</b><small>Gives error-free results if input and program are correct</small></div>
+    <div class="box" style="background:#059669"><div class="ic">💾</div><b>Storage</b><small>Stores huge data and retrieves it instantly</small></div>
+    <div class="box" style="background:#ea580c"><div class="ic">🔁</div><b>Diligence &amp; Automation</b><small>Works for hours without tiredness or loss of concentration</small></div>
+  </div>
+  <p style="margin-top:8px;font-size:.82rem;color:var(--muted)">Other traits: versatility, no IQ (follows instructions only), reliability.</p>
+
+  <h3>Five Generations: Key Hardware Technology</h3>
+  <div class="timeline">
+    <div class="gen" style="background:#b91c1c"><div class="n">1st</div><b>Vacuum Tubes</b><small>1940-1956</small><small>Huge, hot, costly. e.g. ENIAC, UNIVAC</small><div class="size"><i style="width:100%"></i></div></div>
+    <div class="gen" style="background:#ea580c"><div class="n">2nd</div><b>Transistors</b><small>1956-1963</small><small>Smaller, faster, less heat. e.g. IBM 1401</small><div class="size"><i style="width:75%"></i></div></div>
+    <div class="gen" style="background:#a16207"><div class="n">3rd</div><b>Integrated Circuits (IC)</b><small>1964-1971</small><small>Many transistors on one chip. e.g. IBM 360</small><div class="size"><i style="width:50%"></i></div></div>
+    <div class="gen" style="background:#059669"><div class="n">4th</div><b>Microprocessors (VLSI)</b><small>1971-present</small><small>Whole CPU on a chip. PCs, laptops</small><div class="size"><i style="width:28%"></i></div></div>
+    <div class="gen" style="background:#2563eb"><div class="n">5th</div><b>ULSI &amp; Artificial Intelligence</b><small>Present &amp; beyond</small><small>AI, parallel processing, quantum, robotics</small><div class="size"><i style="width:12%"></i></div></div>
+  </div>
+  <div class="legend"><span>Bar = relative size of machine (longer = bigger)</span></div>
+</section>
+
+<!-- Q2 -->
+<section style="border-top-color:#7c3aed">
+  <div class="qh"><div class="qn" style="background:#7c3aed">2</div><div><h2>Block Diagram of a Computer</h2><span class="tag" style="background:#f3e8ff;color:#7c3aed">Understanding &bull; Explain</span></div></div>
+  <div class="qs">Explain the flow of data, instructions, and control signals within the functional block diagram, detailing interaction between CPU, memory unit, and I/O interface.</div>
+
+  <svg viewBox="0 0 700 360" role="img" aria-label="Computer block diagram">
+    <defs>
+      <marker id="ad" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#2563eb"/></marker>
+      <marker id="ac" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#dc2626"/></marker>
+    </defs>
+    <rect x="10" y="130" width="120" height="80" rx="12" fill="#059669"/>
+    <text x="70" y="165" fill="#fff" text-anchor="middle" font-weight="700" font-size="15">INPUT</text>
+    <text x="70" y="187" fill="#fff" text-anchor="middle" font-size="11">Keyboard, Mouse</text>
+    <rect x="570" y="130" width="120" height="80" rx="12" fill="#ea580c"/>
+    <text x="630" y="165" fill="#fff" text-anchor="middle" font-weight="700" font-size="15">OUTPUT</text>
+    <text x="630" y="187" fill="#fff" text-anchor="middle" font-size="11">Monitor, Printer</text>
+    <rect x="200" y="60" width="300" height="160" rx="16" fill="#eef2ff" stroke="#7c3aed" stroke-width="3"/>
+    <text x="350" y="82" text-anchor="middle" font-weight="700" fill="#4c1d95" font-size="14">CPU</text>
+    <rect x="220" y="100" width="120" height="50" rx="10" fill="#7c3aed"/>
+    <text x="280" y="122" fill="#fff" text-anchor="middle" font-weight="700" font-size="13">Control Unit</text>
+    <text x="280" y="139" fill="#fff" text-anchor="middle" font-size="10">fetch, decode, control</text>
+    <rect x="360" y="100" width="120" height="50" rx="10" fill="#2563eb"/>
+    <text x="420" y="122" fill="#fff" text-anchor="middle" font-weight="700" font-size="13">ALU</text>
+    <text x="420" y="139" fill="#fff" text-anchor="middle" font-size="10">arithmetic &amp; logic</text>
+    <rect x="270" y="165" width="160" height="38" rx="10" fill="#0891b2"/>
+    <text x="350" y="189" fill="#fff" text-anchor="middle" font-weight="700" font-size="12">Registers</text>
+    <rect x="200" y="285" width="300" height="60" rx="12" fill="#db2777"/>
+    <text x="350" y="312" fill="#fff" text-anchor="middle" font-weight="700" font-size="15">MEMORY UNIT</text>
+    <text x="350" y="331" fill="#fff" text-anchor="middle" font-size="11">Primary (RAM/ROM) + Secondary storage</text>
+    <!-- data arrows -->
+    <line x1="130" y1="170" x2="198" y2="170" stroke="#2563eb" stroke-width="3" marker-end="url(#ad)"/>
+    <line x1="500" y1="170" x2="568" y2="170" stroke="#2563eb" stroke-width="3" marker-end="url(#ad)"/>
+    <line x1="320" y1="222" x2="320" y2="283" stroke="#2563eb" stroke-width="3" marker-end="url(#ad)"/>
+    <line x1="380" y1="283" x2="380" y2="224" stroke="#2563eb" stroke-width="3" marker-end="url(#ad)"/>
+    <!-- control arrows (dashed red) -->
+    <path d="M280 100 Q280 30 70 30 L70 128" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#ac)"/>
+    <path d="M340 62 Q420 20 630 30 L630 128" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#ac)"/>
+    <path d="M240 152 Q150 300 198 315" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#ac)"/>
+    <text x="150" y="150" fill="#2563eb" font-size="11" font-weight="700">data</text>
+    <text x="520" y="160" fill="#2563eb" font-size="11" font-weight="700">results</text>
+    <text x="325" y="262" fill="#2563eb" font-size="10" font-weight="700" text-anchor="end">store</text>
+    <text x="388" y="262" fill="#2563eb" font-size="10" font-weight="700">fetch</text>
+    <text x="350" y="22" fill="#dc2626" font-size="11" font-weight="700" text-anchor="middle">control signals</text>
+  </svg>
+  <div class="legend"><span><i style="background:#2563eb"></i>Data / instruction flow (solid)</span><span><i style="background:#dc2626"></i>Control signals (dashed)</span></div>
+
+  <h3>Explanation</h3>
+  <ul>
+    <li><b>Data flow:</b> Input devices convert user data into binary and send it via the I/O interface to memory. The ALU gets data from memory/registers, processes it, and sends results back to memory or out to the output device.</li>
+    <li><b>Instruction flow:</b> Programs are stored in memory. The Control Unit <i>fetches</i> each instruction, <i>decodes</i> it, and then <i>executes</i> it (fetch-decode-execute cycle).</li>
+    <li><b>Control signals:</b> The Control Unit does not process data itself. It sends timing and command signals to the ALU, memory, and I/O devices so every part works in the correct order.</li>
+    <li><b>Interaction:</b> CPU &harr; Memory (read/write through buses); CPU &harr; I/O interface (the interface matches the speed and format of slow devices with the fast CPU).</li>
+  </ul>
+</section>
+
+<!-- Q3 -->
+<section style="border-top-color:#059669">
+  <div class="qh"><div class="qn" style="background:#059669">3</div><div><h2>Scanners &amp; Card Readers on Campus</h2><span class="tag" style="background:#d1fae5;color:#059669">Applying &bull; Demonstrate</span></div></div>
+  <div class="qs">Demonstrate how optical scanners (barcode/OMR) and card readers (RFID/smart card) can automate student attendance and library checkouts.</div>
+
+  <div class="two">
+    <div class="panel">
+      <h3 style="margin-top:0">🎓 Automated Attendance</h3>
+      <div class="steps">
+        <div class="st">Student taps RFID ID card</div><span class="ar">&darr;</span>
+        <div class="st">Reader at class door reads unique ID</div><span class="ar">&darr;</span>
+        <div class="st">Database marks Present + time</div><span class="ar">&darr;</span>
+        <div class="st">Report auto-sent to teacher / parents</div>
+      </div>
+      <ul><li><b>OMR sheet:</b> students shade bubbles for roll no. &amp; answers; OMR scanner checks marks in seconds for exams.</li><li>Saves time, avoids proxy attendance.</li></ul>
+    </div>
+    <div class="panel">
+      <h3 style="margin-top:0">📚 Library Checkout</h3>
+      <div class="steps">
+        <div class="st">Scan student smart card</div><span class="ar">&darr;</span>
+        <div class="st">Scan barcode on book</div><span class="ar">&darr;</span>
+        <div class="st">System records issue &amp; due date</div><span class="ar">&darr;</span>
+        <div class="st">Return: scan again, fine auto-calculated</div>
+      </div>
+      <ul><li>Barcode scanner uses a laser/LED to read the black-white bar pattern.</li><li>No manual register; stock is tracked live.</li></ul>
+    </div>
+  </div>
+
+  <table>
+    <tr><th>Device</th><th>How it works</th><th>Campus use</th></tr>
+    <tr><td>Barcode scanner</td><td>Light reflection from bars</td><td>Book issue/return, ID check</td></tr>
+    <tr><td>OMR scanner</td><td>Detects darkened bubbles</td><td>Exam &amp; attendance sheets</td></tr>
+    <tr><td>RFID reader</td><td>Radio waves read tag chip (no contact)</td><td>Classroom/hostel entry attendance</td></tr>
+    <tr><td>Smart card reader</td><td>Contact with embedded chip</td><td>Library, canteen, fee payment</td></tr>
+  </table>
+</section>
+
+<!-- Q4 -->
+<section style="border-top-color:#ea580c">
+  <div class="qh"><div class="qn" style="background:#ea580c">4</div><div><h2>Low-Level vs High-Level Languages</h2><span class="tag" style="background:#ffedd5;color:#ea580c">Analyzing &bull; Distinguish</span></div></div>
+  <div class="qs">Distinguish between low-level (Machine, Assembly) and high-level languages: execution speed, hardware dependence, translation, programming complexity.</div>
+
+  <svg viewBox="0 0 700 150" role="img" aria-label="Language levels">
+    <rect x="20" y="20" width="200" height="110" rx="12" fill="#b91c1c"/>
+    <text x="120" y="60" fill="#fff" text-anchor="middle" font-weight="700">Machine Language</text>
+    <text x="120" y="82" fill="#fff" text-anchor="middle" font-size="13">0s and 1s</text>
+    <text x="120" y="104" fill="#fff" text-anchor="middle" font-size="11">Closest to hardware</text>
+    <rect x="250" y="20" width="200" height="110" rx="12" fill="#ea580c"/>
+    <text x="350" y="60" fill="#fff" text-anchor="middle" font-weight="700">Assembly Language</text>
+    <text x="350" y="82" fill="#fff" text-anchor="middle" font-size="13">ADD, MOV, SUB</text>
+    <text x="350" y="104" fill="#fff" text-anchor="middle" font-size="11">Mnemonics</text>
+    <rect x="480" y="20" width="200" height="110" rx="12" fill="#059669"/>
+    <text x="580" y="60" fill="#fff" text-anchor="middle" font-weight="700">High-Level Language</text>
+    <text x="580" y="82" fill="#fff" text-anchor="middle" font-size="13">C, Java, Python</text>
+    <text x="580" y="104" fill="#fff" text-anchor="middle" font-size="11">English-like</text>
+    <path d="M225 75 H245" stroke="#333" stroke-width="3"/><path d="M455 75 H475" stroke="#333" stroke-width="3"/>
+  </svg>
+  <div class="legend"><span>&larr; Closer to machine &nbsp;|&nbsp; Closer to human &rarr;</span></div>
+
+  <table>
+    <tr><th>Basis</th><th>Low-Level (Machine / Assembly)</th><th>High-Level</th></tr>
+    <tr><td><b>Execution speed</b></td><td>Very fast (direct or near-direct execution)</td><td>Slower (needs translation, extra overhead)</td></tr>
+    <tr><td><b>Hardware dependence</b></td><td>Machine dependent; code works only on one processor type</td><td>Machine independent; portable across systems</td></tr>
+    <tr><td><b>Translation</b></td><td>Machine: none. Assembly: assembler</td><td>Compiler or interpreter required</td></tr>
+    <tr><td><b>Programming complexity</b></td><td>Difficult, long code, hard to debug</td><td>Easy to learn, write, read and debug</td></tr>
+  </table>
+
+  <div class="bar"><label><span>Execution speed</span><span>Low-level wins</span></label><div class="track"><div class="fill" style="width:92%;background:#b91c1c"></div></div><div class="track"><div class="fill" style="width:65%;background:#059669"></div></div></div>
+  <div class="bar"><label><span>Ease of programming</span><span>High-level wins</span></label><div class="track"><div class="fill" style="width:20%;background:#b91c1c"></div></div><div class="track"><div class="fill" style="width:90%;background:#059669"></div></div></div>
+  <div class="legend"><span><i style="background:#b91c1c"></i>Low-level</span><span><i style="background:#059669"></i>High-level</span></div>
+</section>
+
+<!-- Q5 -->
+<section style="border-top-color:#db2777">
+  <div class="qh"><div class="qn" style="background:#db2777">5</div><div><h2>Mouse/Trackball vs Digitizer Tablet</h2><span class="tag" style="background:#fce7f3;color:#db2777">Analyzing &bull; Compare</span></div></div>
+  <div class="qs">Compare point-and-draw devices (mouse, trackball) with graphics digitizers/drawing tablets: coordinate tracking and pressure sensitivity for CAD and digital art.</div>
+
+  <div class="two">
+    <div class="panel">
+      <h3 style="margin-top:0">🖱️ Mouse / Trackball</h3>
+      <svg viewBox="0 0 260 140"><rect x="5" y="5" width="250" height="130" rx="10" fill="#f1f5f9" stroke="#94a3b8"/>
+        <circle cx="60" cy="100" r="6" fill="#db2777"/><path d="M60 100 L130 60 L200 85" stroke="#db2777" stroke-width="3" fill="none" stroke-dasharray="5 4"/>
+        <circle cx="130" cy="60" r="5" fill="#db2777"/><circle cx="200" cy="85" r="5" fill="#db2777"/>
+        <text x="130" y="125" text-anchor="middle" font-size="11" fill="#334155">Relative: moves from last position</text></svg>
+      <ul><li><b>Tracking:</b> relative (change in position)</li><li><b>Pressure:</b> none (only click)</li><li><b>Precision:</b> moderate; lifting and repositioning needed</li><li><b>Best for:</b> general pointing, basic CAD selection</li></ul>
+    </div>
+    <div class="panel">
+      <h3 style="margin-top:0">✏️ Digitizer / Drawing Tablet</h3>
+      <svg viewBox="0 0 260 140"><rect x="5" y="5" width="250" height="130" rx="10" fill="#fdf2f8" stroke="#db2777"/>
+        <path d="M30 100 C70 30 120 120 160 60 S220 50 235 40" stroke="#7c3aed" stroke-width="2" fill="none"/>
+        <path d="M30 100 C70 30 120 120 160 60 S220 50 235 40" stroke="#7c3aed" stroke-width="7" fill="none" opacity=".25"/>
+        <text x="130" y="125" text-anchor="middle" font-size="11" fill="#334155">Absolute: tablet point = screen point</text></svg>
+      <ul><li><b>Tracking:</b> absolute (tablet area = screen area)</li><li><b>Pressure:</b> 1,024-8,192 levels (stroke thickness/opacity)</li><li><b>Precision:</b> high; pen-like natural control</li><li><b>Best for:</b> tracing drawings in CAD, digital art, signatures</li></ul>
+    </div>
+  </div>
+
+  <h3>Capability Score (out of 10)</h3>
+  <div class="bar"><label><span>Coordinate accuracy</span><span>Mouse 5 | Tablet 9</span></label><div class="track"><div class="fill" style="width:50%;background:#94a3b8"></div></div><div class="track"><div class="fill" style="width:90%;background:#db2777"></div></div></div>
+  <div class="bar"><label><span>Pressure sensitivity</span><span>Mouse 0 | Tablet 10</span></label><div class="track"><div class="fill" style="width:2%;background:#94a3b8"></div></div><div class="track"><div class="fill" style="width:100%;background:#db2777"></div></div></div>
+  <div class="bar"><label><span>Cost-friendliness</span><span>Mouse 9 | Tablet 5</span></label><div class="track"><div class="fill" style="width:90%;background:#94a3b8"></div></div><div class="track"><div class="fill" style="width:50%;background:#db2777"></div></div></div>
+  <div class="legend"><span><i style="background:#94a3b8"></i>Mouse / trackball</span><span><i style="background:#db2777"></i>Digitizer / tablet</span></div>
+</section>
+
+<!-- Q6 -->
+<section style="border-top-color:#0891b2">
+  <div class="qh"><div class="qn" style="background:#0891b2">6</div><div><h2>Plotter vs UHD Monitor + Large-Format Printer</h2><span class="tag" style="background:#cffafe;color:#0891b2">Evaluating &bull; Assess, Justify</span></div></div>
+  <div class="qs">Assess whether a drum/flatbed plotter or an ultra-HD monitor with large-format printer is superior for civil engineering blueprints (line resolution, scalability, long-term cost).</div>
+
+  <table>
+    <tr><th>Criterion</th><th>Drum / Flatbed Plotter</th><th>UHD Monitor + Large-Format Printer</th></tr>
+    <tr><td>Line resolution</td><td>Excellent crisp vector lines (pen), but limited colour/fill</td><td>Very high (600-2400 dpi) lines <i>and</i> colour/shading</td></tr>
+    <tr><td>Scalability</td><td>Handles A0+ sheets, but slow for many copies</td><td>Easily scales from A4 to A0+ and screen review before print</td></tr>
+    <tr><td>Long-term cost</td><td>Moving parts, pen wear, costly service, outdated</td><td>Lower maintenance; ink cost per sheet reasonable; monitor reduces wasted prints</td></tr>
+    <tr><td>Speed &amp; flexibility</td><td>Slow</td><td>Fast, supports raster + vector, PDF</td></tr>
+  </table>
+
+  <h3>Score Comparison (out of 10)</h3>
+  <svg viewBox="0 0 700 240" role="img" aria-label="Score chart">
+    <g font-size="12" fill="#334155">
+      <text x="10" y="35">Line resolution</text>
+      <rect x="150" y="20" width="400" height="12" rx="6" fill="#e8edf5"/><rect x="150" y="20" width="320" height="12" rx="6" fill="#94a3b8"/><text x="560" y="31">Plotter 8</text>
+      <rect x="150" y="36" width="400" height="12" rx="6" fill="#e8edf5"/><rect x="150" y="36" width="360" height="12" rx="6" fill="#0891b2"/><text x="560" y="47">UHD+Printer 9</text>
+      <text x="10" y="95">Scalability</text>
+      <rect x="150" y="80" width="400" height="12" rx="6" fill="#e8edf5"/><rect x="150" y="80" width="240" height="12" rx="6" fill="#94a3b8"/><text x="560" y="91">Plotter 6</text>
+      <rect x="150" y="96" width="400" height="12" rx="6" fill="#e8edf5"/><rect x="150" y="96" width="360" height="12" rx="6" fill="#0891b2"/><text x="560" y="107">UHD+Printer 9</text>
+      <text x="10" y="155">Long-term cost</text>
+      <rect x="150" y="140" width="400" height="12" rx="6" fill="#e8edf5"/><rect x="150" y="140" width="160" height="12" rx="6" fill="#94a3b8"/><text x="560" y="151">Plotter 4</text>
+      <rect x="150" y="156" width="400" height="12" rx="6" fill="#e8edf5"/><rect x="150" y="156" width="320" height="12" rx="6" fill="#0891b2"/><text x="560" y="167">UHD+Printer 8</text>
+      <text x="10" y="215">Overall</text>
+      <rect x="150" y="200" width="400" height="12" rx="6" fill="#e8edf5"/><rect x="150" y="200" width="240" height="12" rx="6" fill="#94a3b8"/><text x="560" y="211">Plotter 6</text>
+      <rect x="150" y="216" width="400" height="12" rx="6" fill="#e8edf5"/><rect x="150" y="216" width="347" height="12" rx="6" fill="#0891b2"/><text x="560" y="227">UHD+Printer 8.7</text>
+    </g>
+  </svg>
+  <div class="verdict"><b>✅ Verdict:</b> The <b>UHD monitor + large-format printer</b> combination is superior for modern civil engineering blueprints. Designers can zoom and check details on screen before printing, which cuts waste; it prints at high resolution in colour on large sheets; and it costs less to maintain over time. A plotter remains useful only for pure line drawings on very large sheets where legacy workflows exist.</div>
+</section>
+
+<!-- Q7 -->
+<section style="border-top-color:#dc2626">
+  <div class="qh"><div class="qn" style="background:#dc2626">7</div><div><h2>Facial vs Voice Recognition for Authentication</h2><span class="tag" style="background:#fee2e2;color:#dc2626">Evaluating &bull; Critique</span></div></div>
+  <div class="qs">Critique reliability and security vulnerabilities of vision-input (facial recognition) vs voice recognition as primary biometrics in high-noise, publicly exposed environments.</div>
+
+  <div class="two">
+    <div class="panel">
+      <h3 style="margin-top:0">👁️ Facial Recognition</h3>
+      <p><b>Strengths:</b> Not affected by noise; fast, contactless.</p>
+      <p><b>Weaknesses:</b> Poor lighting, glare, rain, masks, caps/glasses lower accuracy; spoofing with photo, video or 3D mask; privacy concerns as faces are visible in public.</p>
+      <div class="bar"><label><span>Reliability in noise</span><span>8/10</span></label><div class="track"><div class="fill" style="width:80%;background:#059669"></div></div></div>
+      <div class="bar"><label><span>Spoof resistance</span><span>6/10 (7 with liveness check)</span></label><div class="track"><div class="fill" style="width:60%;background:#ea580c"></div></div></div>
+    </div>
+    <div class="panel">
+      <h3 style="margin-top:0">🎙️ Voice Recognition</h3>
+      <p><b>Strengths:</b> Hands-free, cheap hardware.</p>
+      <p><b>Weaknesses:</b> Background noise and crowd talk corrupt the signal; voice changes with cold or stress; replay attacks (recordings) and AI voice cloning; others can overhear passphrases.</p>
+      <div class="bar"><label><span>Reliability in noise</span><span>3/10</span></label><div class="track"><div class="fill" style="width:30%;background:#dc2626"></div></div></div>
+      <div class="bar"><label><span>Spoof resistance</span><span>4/10</span></label><div class="track"><div class="fill" style="width:40%;background:#dc2626"></div></div></div>
+    </div>
+  </div>
+  <div class="verdict" style="background:#fef2f2;border-color:#fecaca"><b>Critique:</b> In loud, public places, voice recognition is the weaker choice, since noise directly damages its input and recordings are easy to replay. Facial recognition is more dependable there, though it needs good cameras, liveness detection (blink/depth checks) and privacy safeguards. Best practice: use face as primary and add a second factor (PIN or card) rather than relying on any single biometric.</div>
+</section>
+
+<!-- Q8 -->
+<section style="border-top-color:#7c3aed">
+  <div class="qh"><div class="qn" style="background:#7c3aed">8</div><div><h2>Hands-Free Workstation for a Visually Impaired User</h2><span class="tag" style="background:#f3e8ff;color:#7c3aed">Creating &bull; Design</span></div></div>
+  <div class="qs">Design an accessible, hands-free workstation combining non-visual input devices (voice recognition, tactile keyboards) with specialized output (voice response synthesizers, screen readers).</div>
+
+  <svg viewBox="0 0 700 330" role="img" aria-label="Accessible workstation design">
+    <defs><marker id="a8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#475569"/></marker></defs>
+    <text x="110" y="22" text-anchor="middle" font-weight="700" fill="#059669">INPUT (non-visual)</text>
+    <text x="590" y="22" text-anchor="middle" font-weight="700" fill="#ea580c">OUTPUT (non-visual)</text>
+    <rect x="10" y="35" width="200" height="60" rx="10" fill="#059669"/><text x="110" y="60" fill="#fff" text-anchor="middle" font-weight="700" font-size="13">🎙️ Voice Recognition</text><text x="110" y="80" fill="#fff" text-anchor="middle" font-size="11">Headset mic, voice commands</text>
+    <rect x="10" y="110" width="200" height="60" rx="10" fill="#16a34a"/><text x="110" y="135" fill="#fff" text-anchor="middle" font-weight="700" font-size="13">⌨️ Tactile Keyboard</text><text x="110" y="155" fill="#fff" text-anchor="middle" font-size="11">Raised F &amp; J marks, Braille keys</text>
+    <rect x="10" y="185" width="200" height="60" rx="10" fill="#15803d"/><text x="110" y="210" fill="#fff" text-anchor="middle" font-weight="700" font-size="13">📷 OCR Scanner</text><text x="110" y="230" fill="#fff" text-anchor="middle" font-size="11">Scans print, converts to speech</text>
+    <rect x="260" y="95" width="180" height="120" rx="16" fill="#7c3aed"/>
+    <text x="350" y="130" fill="#fff" text-anchor="middle" font-weight="700" font-size="14">🖥️ Computer</text>
+    <text x="350" y="152" fill="#fff" text-anchor="middle" font-size="11">Screen reader software</text>
+    <text x="350" y="170" fill="#fff" text-anchor="middle" font-size="11">(NVDA / JAWS)</text>
+    <text x="350" y="190" fill="#fff" text-anchor="middle" font-size="11">+ Speech engine (TTS)</text>
+    <rect x="490" y="35" width="200" height="60" rx="10" fill="#ea580c"/><text x="590" y="60" fill="#fff" text-anchor="middle" font-weight="700" font-size="13">🔊 Voice Response / TTS</text><text x="590" y="80" fill="#fff" text-anchor="middle" font-size="11">Speaks text, menus, alerts</text>
+    <rect x="490" y="110" width="200" height="60" rx="10" fill="#c2410c"/><text x="590" y="135" fill="#fff" text-anchor="middle" font-weight="700" font-size="13">⠿ Braille Display</text><text x="590" y="155" fill="#fff" text-anchor="middle" font-size="11">Pins form Braille line</text>
+    <rect x="490" y="185" width="200" height="60" rx="10" fill="#9a3412"/><text x="590" y="210" fill="#fff" text-anchor="middle" font-weight="700" font-size="13">🎧 Headphones + Earcons</text><text x="590" y="230" fill="#fff" text-anchor="middle" font-size="11">Private audio, beep cues</text>
+    <g stroke="#475569" stroke-width="2.5" marker-end="url(#a8)">
+      <line x1="210" y1="65" x2="258" y2="120"/><line x1="210" y1="140" x2="258" y2="150"/><line x1="210" y1="215" x2="258" y2="185"/>
+      <line x1="440" y1="120" x2="488" y2="65"/><line x1="440" y1="150" x2="488" y2="140"/><line x1="440" y1="185" x2="488" y2="215"/>
+    </g>
+    <rect x="10" y="265" width="680" height="50" rx="10" fill="#eef2ff" stroke="#7c3aed"/>
+    <text x="350" y="287" text-anchor="middle" font-size="12" fill="#1e3a8a" font-weight="700">Workstation ergonomics &amp; safety</text>
+    <text x="350" y="305" text-anchor="middle" font-size="11" fill="#334155">Fixed device positions, cable management, tactile desk markers, adjustable chair, good acoustics</text>
+  </svg>
+
+  <h3>How the Parts Work Together</h3>
+  <div class="steps">
+    <div class="st">User speaks or types in Braille</div><span class="ar">&rarr;</span>
+    <div class="st">Voice recognition / tactile keyboard sends command</div><span class="ar">&rarr;</span>
+    <div class="st">Screen reader interprets screen content</div><span class="ar">&rarr;</span>
+    <div class="st">Speech synthesizer reads aloud + Braille display shows text</div>
+  </div>
+  <ul>
+    <li><b>Hands-free control:</b> voice commands for opening apps, dictation and navigation; tactile keyboard as a reliable backup when voice is not suitable (noise, privacy).</li>
+    <li><b>Redundant output:</b> speech for speed, Braille for accuracy (spelling, numbers, code); headphones keep audio private.</li>
+    <li><b>Extras:</b> OCR scanner reads printed books and notes aloud; audio cues (earcons) signal errors, new mail and low battery.</li>
+    <li><b>For a physiotherapy student:</b> accessible e-books and notes, with dictation for assignments and spoken feedback for anatomy terms.</li>
+  </ul>
+</section>
+
+</main>
+<footer>Prepared by <b>Anjali Yadav</b> &bull; Roll No 1826011 &bull; BPT-109 Assignment-1</footer>
+</body>
+</html>
